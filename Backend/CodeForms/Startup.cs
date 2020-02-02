@@ -3,14 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using CodeForms.Context;
+using CodeForms.Interface;
 using CodeForms.Options;
+using CodeForms.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
 
 namespace CodeForms
 {
@@ -28,6 +32,11 @@ namespace CodeForms
         {
             services.AddDbContext<ApplicationDBContext>(options => options.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddControllersWithViews();
+            services.AddScoped<IUserService, UserService>();
+            services.AddMvc(option => option.EnableEndpointRouting = false)
+                 .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+                 .AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore);
+
             services.AddSwaggerGen(x =>
             {
             x.SwaggerDoc("v1",  new Microsoft.OpenApi.Models.OpenApiInfo {Title ="CodeForms API", Version = "v1"} );
@@ -59,7 +68,7 @@ namespace CodeForms
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller}/{action}/{id?}");
             });
         }
     }

@@ -1,4 +1,5 @@
 ﻿using CodeForms.Context;
+using CodeForms.Interface;
 using CodeForms.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -7,29 +8,28 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CodeForms.Controllers
+namespace CodeForms.Services
 {
-    public class UserController : Controller
+    public class UserService : Controller, IUserService
     {
         private readonly ApplicationDBContext _context;
 
-        public UserController (ApplicationDBContext context)
+        public UserService(ApplicationDBContext context)
         {
             _context = context;
         }
-        [HttpGet("api/ListUsers")]
-        public async Task<ActionResult<IEnumerable<User>>> Get()
+
+        public async Task<ActionResult<IEnumerable<User>>> GetAll()
         {
             return await _context.Users.ToListAsync();
         }
 
-        [HttpPost("api/CreateUser")]
-        public async Task<ActionResult<User>> CreateUser([FromBody]User user)
+        public async Task<ActionResult<User>> CreateUser(User user)
         {
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetUser", new { id = user.Id }, user);
+            return user;
         }
 
     }

@@ -10,7 +10,6 @@ namespace CodeForms.Options
     {
         public string JsonRoute { get; set; }
         public string Description { get; set; }
-
         public string UiEndPoint { get; set; }
 
     }

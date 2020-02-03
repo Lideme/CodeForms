@@ -9023,19 +9023,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leo_k\\.nuget\\packages\\": {}
+    "C:\\Users\\gilbe\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\leo_k\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj",
+      "projectUniqueName": "C:\\Users\\gilbe\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj",
       "projectName": "CodeForms",
-      "projectPath": "C:\\Users\\leo_k\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj",
-      "packagesPath": "C:\\Users\\leo_k\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\leo_k\\Coding\\CodeForms\\Backend\\CodeForms\\obj\\",
+      "projectPath": "C:\\Users\\gilbe\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj",
+      "packagesPath": "C:\\Users\\gilbe\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gilbe\\Coding\\CodeForms\\Backend\\CodeForms\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\leo_k\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\gilbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9116,7 +9116,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -9125,7 +9125,7 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Package 'Microsoft.AspNet.WebApi.Core 5.2.7' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "message": "O pacote 'Microsoft.AspNet.WebApi.Core 5.2.7' foi restaurado usando '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' em vez da estrutura de destino do projeto '.NETCoreApp,Version=v3.1'. Esse pacote pode não ser totalmente compatível com o seu projeto.",
       "libraryId": "Microsoft.AspNet.WebApi.Core",
       "targetGraphs": [
         ".NETCoreApp,Version=v3.1"

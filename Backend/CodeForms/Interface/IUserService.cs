@@ -11,6 +11,9 @@ namespace CodeForms.Interface
     {
         Task<ActionResult<IEnumerable<User>>> GetAll();
         Task<ActionResult<User>> CreateUser(User user);
+        Task<ActionResult<User>> GetUser(int id);
+        Task<ActionResult<User>> EditUser(int id, User user);
+        Task<ActionResult<User>> DeleteUser(int id);
 
     }
 }

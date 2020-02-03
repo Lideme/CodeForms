@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\leo_k\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj": {}
+    "C:\\Users\\gilbe\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj": {}
   },
   "projects": {
-    "C:\\Users\\leo_k\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj": {
+    "C:\\Users\\gilbe\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\leo_k\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj",
+        "projectUniqueName": "C:\\Users\\gilbe\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj",
         "projectName": "CodeForms",
-        "projectPath": "C:\\Users\\leo_k\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj",
-        "packagesPath": "C:\\Users\\leo_k\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\leo_k\\Coding\\CodeForms\\Backend\\CodeForms\\obj\\",
+        "projectPath": "C:\\Users\\gilbe\\Coding\\CodeForms\\Backend\\CodeForms\\CodeForms.csproj",
+        "packagesPath": "C:\\Users\\gilbe\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gilbe\\Coding\\CodeForms\\Backend\\CodeForms\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\leo_k\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gilbe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

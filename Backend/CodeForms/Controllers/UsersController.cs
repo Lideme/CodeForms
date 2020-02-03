@@ -18,8 +18,7 @@ namespace CodeForms.Controllers
         {
             _userService = userService;
         }
-       
-        
+
         [HttpGet("api/ListUsers")]
         public async Task<ActionResult<IEnumerable<User>>> GetAll()
         {
@@ -34,6 +33,27 @@ namespace CodeForms.Controllers
 
             return Created("GetAll", user);
         }
+
+        [HttpGet("api/UserInfo")]
+        public async Task<ActionResult<User>> GetUser(int id)
+        {
+           
+            return await _userService.GetUser(id);
+        }
+
+        [HttpPut("api/EditUser")]
+        public async Task<ActionResult<User>> EditUser(int id, User user)
+        {
+            return await _userService.EditUser(id,user);
+        }
+
+        [HttpDelete("api/DeleteUser")]
+        public async Task<ActionResult<User>> DeleteUser(int id)
+        {
+            return await _userService.DeleteUser(id);
+        }
+
+
 
     }
 }

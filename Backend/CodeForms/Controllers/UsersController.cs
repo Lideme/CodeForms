@@ -34,20 +34,21 @@ namespace CodeForms.Controllers
             return Created("GetAll", user);
         }
 
-        [HttpGet("api/UserInfo")]
+        [HttpGet("api/ListUsers/{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
            
             return await _userService.GetUser(id);
         }
 
-        [HttpPut("api/EditUser")]
-        public async Task<ActionResult<User>> EditUser(int id, User user)
+        [HttpPatch("api/EditUser/{id}")]
+        public async Task<ActionResult<User>> EditUser(int id,[FromBody] User user)
         {
+            
             return await _userService.EditUser(id,user);
         }
 
-        [HttpDelete("api/DeleteUser")]
+        [HttpDelete("api/DeleteUser/{id}")]
         public async Task<ActionResult<User>> DeleteUser(int id)
         {
             return await _userService.DeleteUser(id);

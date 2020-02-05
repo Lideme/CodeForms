@@ -38,7 +38,7 @@ namespace CodeForms.Services
 
             if (user == null)
             {
-                return NotFound();
+                return NotFound("User dont exist.");
             }
 
             return user;
@@ -57,7 +57,7 @@ namespace CodeForms.Services
             {
                 await _context.SaveChangesAsync();
             }
-            catch (DbUpdateConcurrencyException)
+            catch (DbUpdateConcurrencyException error)
             {
                 if (!UserExists(id))
                 {
@@ -65,14 +65,14 @@ namespace CodeForms.Services
                 }
                 else
                 {
-                    throw;
+                    throw error;
                 }
             } 
 
-            return NoContent();
+            return user;
         }
 
-        public async Task<ActionResult<User>> DeleteUser(int id)
+        public async Task<ActionResult> DeleteUser(int id)
         {
             var user = await _context.Users.FindAsync(id);
 
@@ -84,12 +84,12 @@ namespace CodeForms.Services
             _context.Users.Remove(user);
             await _context.SaveChangesAsync();
 
-            return (user);
+            return Ok("User deleted.");
         }
 
         private bool UserExists(int id)
         {
-            return _context.Users.Any(e => e.Id == id);
+            return _context.Users.Any(user => user.Id == id);
         }
         
 

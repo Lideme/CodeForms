@@ -13,7 +13,7 @@ namespace CodeForms.Interface
         Task<ActionResult<User>> CreateUser(User user);
         Task<ActionResult<User>> GetUser(int id);
         Task<ActionResult<User>> EditUser(int id, User user);
-        Task<ActionResult<User>> DeleteUser(int id);
+        Task<ActionResult> DeleteUser(int id);
 
     }
 }
